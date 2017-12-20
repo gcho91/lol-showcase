@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Youtaite Showcase</title>
+  </head>
+
+  <body>
+    <!--audio files -->
+    <audio class="snippet" id="ria_snippet" preload="auto">
+     <source src="sounds/ria_snippet_project.m4a">
+    </audio>
+
+    <audio class="snippet" id="pearl_snippet" preload="auto">
+     <source src="sounds/pearl_snippet_project.m4a">
+    </audio>
+
+
+
+    <h1>Youtaite Showcase</h1>
+
+    <div class="ria">
+      <h2>Ria</h2>
+      <img src="Ria_transparent.png" height="300px" onmouseover="play()" onmouseout="stop()"/>
+    </div>
+
+    <!-- <div class="pearl">
+      <h2>Pearl</h2>
+      <img src="pearl_oc.jpg" height="300px" onmouseover="play()" onmouseout="stop()"/>
+    </div> -->
+
+
+
+  <script>
+  const audio = document.getElementById('ria_snippet');
+
+    function play(e) {
+      // const audio = document.getElementByClassName('snippet');
+      console.log(audio)
+      audio.play();
+
+      //mouse leave stop playing
+    }
+
+    function stop(e) {
+
+      audio.pause();
+      // audio.currentTime = 0;
+    }
+
+
+    // function playPearl(e) {
+    //   const audio = document.getElementById('pearl_snippet');
+    //   audio.play();
+    //   //mouse leave stop playing
+    // }
+    //
+    // function stopPearl(e) {
+    //   const audio = document.getElementById('pearl_snippet');
+    //   audio.pause();
+    //   thissound.currentTime = 0;
+    // }
+  </script>
+  </body>
+
+
+</html>
