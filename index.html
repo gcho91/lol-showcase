@@ -4,63 +4,83 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Youtaite Showcase</title>
+    <title>LoL Voice Showcase</title>
   </head>
 
   <body>
     <!--audio files -->
-    <audio class="snippet" id="ria_snippet" preload="auto">
-     <source src="sounds/ria_snippet_project.m4a">
+
+    <audio class="sound annie_audio" id="annie_attack_1" preload="auto">
+     <!-- <source src="sounds/annie/0614_Annie.attack01.wav"> -->
+      <source src="sounds/annie/0615_Annie.attack02.wav">
+      <!-- <source src="sounds/annie/0614_Annie.attack03.wav"> -->
     </audio>
 
-    <audio class="snippet" id="pearl_snippet" preload="auto">
-     <source src="sounds/pearl_snippet_project.m4a">
-    </audio>
 
 
 
-    <h1>Youtaite Showcase</h1>
 
-    <div class="ria">
-      <h2>Ria</h2>
-      <img src="Ria_transparent.png" height="300px" onmouseover="play()" onmouseout="stop()"/>
-    </div>
+    <!-- <h1>League of Legends - Featured Champions</h1>
 
-    <!-- <div class="pearl">
-      <h2>Pearl</h2>
-      <img src="pearl_oc.jpg" height="300px" onmouseover="play()" onmouseout="stop()"/>
+    <div class="annie">
+      <h2>Annie</h2>
+      <img src="annie_render.png" height="400px" onmouseover="play()" onmouseout="stop()"/>
     </div> -->
 
 
 
+  <!-- <input type='button' value='Try Random Sound' onmouseover='playRandomSound();' />
+  <span id='player'></span> -->
+
+
+<div id='player'>
+  <h2>Annie</h2>
+  <img src="annie_render.png" id="player" height="400px" onmouseover="playRandomSound()" onmouseout="stop()"/>
+</div>
+
+
+<!--champion, hover to play one sound, then hover to play randomized sound -->
+
   <script>
-  const audio = document.getElementById('ria_snippet');
-
-    function play(e) {
-      // const audio = document.getElementByClassName('snippet');
-      console.log(audio)
-      audio.play();
-
-      //mouse leave stop playing
-    }
-
-    function stop(e) {
-
-      audio.pause();
-      // audio.currentTime = 0;
-    }
 
 
-    // function playPearl(e) {
-    //   const audio = document.getElementById('pearl_snippet');
+
+
+
+  function playRandomSound(){
+    var sounds = [
+      "https://dl.dropboxusercontent.com/s/esfqhvid8kpfgzd/VOICE_MARKS_MYROOM_24.wav?dl=0",
+      "http://www.soundjay.com/button/button-2.wav",
+      "https://dl.dropboxusercontent.com/s/ku3b0xq4gb08efh/VOICE_CAMILLA_MYROOM_23.wav?dl=0", "https://dl.dropboxusercontent.com/s/gnauzrknvf3koxt/VOICE_LEON_MYROOM_04.wav?dl=0"];
+
+     var soundFile = sounds[Math.floor(Math.random()*sounds.length)];
+
+     document.getElementById("player").innerHTML="<embed src=\""+soundFile+"\" hidden=\"true\"  loop=\"false\" />";
+}
+
+
+
+    // const audio = document.getElementsByClassName("annie_audio");
+
+    // const audio = document.getElementById("annie_attack_1");
+    //
+    //
+    // function play() {
+    //   // const audio = document.getElementByClassName('snippet');
     //   audio.play();
+    //
     //   //mouse leave stop playing
     // }
+
+    // document.getElementsByClassName('annie_audio').play();
+
+    // function stop(e) {
     //
-    // function stopPearl(e) {
-    //   const audio = document.getElementById('pearl_snippet');
     //   audio.pause();
-    //   thissound.currentTime = 0;
+    //   // audio.currentTime = 0;
+    // }
+
+
     // }
   </script>
   </body>
